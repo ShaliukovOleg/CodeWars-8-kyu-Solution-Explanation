@@ -5,9 +5,20 @@ function positiveSum(arr) {
     return arr.filter(e => e > 0).reduce((a, b) => a + b, 0);
 }
 
+// Solution 2 / Решение 2
+
+function positiveSum(arr) {
+    // проверяем массив уже на этапе суммирования (каждый элемент быстро фильтруем и суммируем только положительные числа)
+    return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
+}
+
 // Short version
 
 const positiveSum = arr => arr.filter(e => e > 0).reduce((a, b) => a + b, 0);
+
+// Short version 2
+
+const positiveSum = arr => arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
 
 // Tests
 
