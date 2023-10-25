@@ -15,6 +15,10 @@ function array(string) {
     return result.length > 0 ? result : null;
 }
 
+// Or 
+
+const array = string => string.split(',').slice(1, -1).join(' ') || null;
+
 // Tests
 
 console.log(array('1,2,3,4')); // 2 3
