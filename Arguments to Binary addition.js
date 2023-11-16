@@ -16,12 +16,16 @@ function arr2bin(arr) {
     return arr.filter(e => typeof e === 'number').reduce((acc, num) => acc + num, 0).toString(2) || '0';
 }
 
+// Shortest version
+
+const arr2bin = arr => arr.reduce((x, y) => x + (typeof y == "number" ? y : 0), 0).toString(2);
+
 // Tests
 
-console.log(arr2bin([1,2,3,4,5])); // 1111
-console.log(arr2bin([1,10,100,1000])); // 10001010111
+console.log(arr2bin([1, 2, 3, 4, 5])); // 1111
+console.log(arr2bin([1, 10, 100, 1000])); // 10001010111
 console.log(arr2bin([null])); // 0
-console.log(arr2bin([true,true,false,15])); // 1111
+console.log(arr2bin([true, true, false, 15])); // 1111
 
 /*
 
