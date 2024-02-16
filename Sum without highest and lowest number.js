@@ -1,7 +1,7 @@
 // Solution / Решение
 
 function sumArray(array) { 
-    return array.length > 1 && Array.isArray(array) // Проверка условия: длина массива больше 1 и array является массивом
+    return Array.isArray(array) && array.length > 1 // Проверка условия: длина массива больше 1 и array является массивом
         ? array // Если условие истинно, возвращаем результат выражения
             .reduce((s, n) => s + n, 0) - Math // Суммируем элементы массива с помощью reduce, начиная с 0
                 .min(...array) - Math // Вычитаем минимальное значение из массива, используя Math.min
